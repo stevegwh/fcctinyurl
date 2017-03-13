@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Url Shortener</title>
+</head>
+<body>
+  <p><h1> Urls entered: </h1></p>
+  <ul>
+    <% for(var i=0; i< size; i++) {%>
+      <li class="url">
+        <span>Original: <%= url[i].userUrl %></span>
+        <span>TinyURL: <%= url[i].tinyUrl %></span>
+      </li>
+    <% } %>
+  </ul>
+  <form action="/url-get" method="POST">
+  <input type="text" placeholder="Enter URL to shorten" name="userUrl">
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>
