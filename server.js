@@ -7,7 +7,7 @@ app.set('view engine', 'ejs')
 MongoClient.connect('mongodb://admin:admin@ds129720.mlab.com:29720/star-wars-quotes', (err, database) => {
   if (err) return console.log(err);
   db = database;
-  app.listen(3000, function() {
+  app.listen(process.env.PORT, function() {
     console.log('listening on 3000')
   })
 })
